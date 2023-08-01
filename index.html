@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Menu card</title>
+
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+			<!----- navbar--- -->
+<div class="navbar1  px-3">
+	<div class="logo">
+		<h3 class=" mb-0 fst-italic" id="logoname"> HOTEL</h3>
+	</div>
+
+	<div>
+		<ul class="d-flex mb-0">
+			<li	class="remonclick bgactive p-1" onclick="opmnupage(), bgcolor(this)"style="background-color:white; color:black" > Menu </li>
+			<li class="remonclick bgactive mx-3 p-1" onclick="alert2()" > Your Order </li> <!--opordpage()-->
+			<li class="remonclick bgactive p-1 " onclick="opconpage(),bgcolor(this)"> Contact </li>
+			<li class="remonclick bgactive ms-3 p-1" onclick="opadpage(this),bgcolor(this)"><img src="images/profile.png" height="20px" width="20px"> Admin </li>
+
+		</ul>
+	</div>
+
+	<div class="adpass px-3 slide-bottom shadow">
+		<div class="text-end pe-1">
+				<img src="images/cancel.png" height="20px" width="20px" onclick="canl1() " style="cursor: pointer;"> 
+		</div>
+		<div class="text-center p-2 pt-0" style="margin-top:-10px">
+			<img src="images/profile (1).png" height="35px" width="35px">
+			<p>Log In</p>
+		</div>
+        <label>User Id: </label><br>
+        <input type="text" name="" id="passinp1" placeholder="admin" class=""><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="" id="passinp2" placeholder="admin" class="">
+
+        <div class="text-center my-3">
+            <button class="btn btn-sm bg-primary text-white " style="width: 100%;" onclick="addpass()" >Log In</button> <br>
+            <!-- <button class="btn btn-sm btn-outline-primary"  style="width: 100%;" onclick="()">Sign Up</button> -->
+            <p class="text-primary mt-2" style="font-size:15px; cursor: pointer;" >Sign Up</p>
+        </div>
+    </div>	
+	
+</div><!--navbar-->
+
+
+<div class="section_1">
+	<div class="menumain" style="display:block;">
+		
+		<div class="tabp text-center pt-4">
+			<button class="btn  border-0 tabbtn" onclick="opentab('starters',this)" style="background-color:#001d3d; color: white;"> Starters </button>
+			<button class="btn  border-0 tabbtn" onclick="opentab('main',this)"> Main </button>
+			<button class="btn  border-0 tabbtn" onclick="opentab('dessert',this)"> Dessert </button>
+
+		</div>
+
+		<div class="menu pb-2">
+			<!----- starters--- -->
+
+			<div class=" p-3 starter tabopen " id="starters" style="display: block;" >
+				<div class="row g-4 vegrows mb-5">
+					<div class="text-center mt-5 mb-0" >
+						<h5 class="fw-bold" style="color: #001d3d;">Veg</h5> 
+
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-3">					<!--ud1-->
+						<div class="items1 rounded shadow bg-white" id="item1">		<!--ud2-->
+							<div class="imgdiv">									<!--ud3-->
+								<img src="images/fingerchips.jpg"   class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2  rounded-bottom">						<!--ud4-->
+								<div class="d-flex justify-content-between  align-items-center py-2">	<!--ud5-->
+									<h4 class="mb-0 vsdish1" style="color: #001d3d;">French Fries</h4>
+									<div class="d-flex align-items-center">								<!--ud6-->
+										
+										<p class="mb-0 fs-5 dishp1" ><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 60</p>
+									</div>
+								</div>
+								<div class="quantity py-2">					<!--ud7-->
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">					<!--ud8-->
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'French Fries',60,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv ">
+								<img src="images/crispy.jpg" class="rounded-top mainimg" alt= "Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1" style="color: #001d3d;">Veg Crispy</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;"onclick="addish1(this,'Veg Crispy',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/manchurian.jpg"  width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1" style="color: #001d3d;">Veg Manchurian</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Veg Manchurian',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/paneerchily.jpg"  width="100%"  class ="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 bg-white rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1" style="color: #001d3d;">Paneer Chilli</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Paneer Chilli',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div><!--vegrows-->
+
+				<div class="row g-4 nonvegrows ">
+					<div class="text-center mt-5 mb-0">
+						<h5 class=" fw-bold" style="color: #001d3d;"> Non-Veg</h5> 
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/lollipop.jpg"  class="rounded-top mainimg" a lt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1 " style="color: #001d3d;">Chicken Lollipop</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Chicken Lollipop',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/chiCrispy.jpg" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1" style="color: #001d3d;">Chicken Crispy</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Chicken Crispy',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/chiManchurian.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1" style="color: #001d3d;">Chicken Manchurian</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Chicken Manchurian',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/chiChily.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 bg-white rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1" style="color: #001d3d;">Chicken Chilli</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Chicken Chilli',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+					
+				</div><!--nonvegrows-->
+			</div>
+
+			<!----- main--- -->
+
+			<div class=" p-3  tabopen slide-in-right" id="main" style="display: none;" >
+				<div class="row g-4 vegrowmain mb-5">
+					<div class="text-center mt-5 mb-0" >
+						<h5 class=" fw-bold" style="color: #001d3d;">Veg </h5> 
+
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-3">		<!--ud1-->
+						<div class="items1 rounded shadow bg-white" id="">		<!--ud2-->
+							<div class="imgdiv">									<!--ud3-->
+								<img src="images/vegPulao.jpg"  class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2  rounded-bottom">						<!--ud4-->
+								<div class="d-flex justify-content-between  align-items-center py-2">	<!--ud5-->
+									<h4 class="mb-0 vsdish1" style="color: #001d3d;" >Veg Pulao</h4>
+									<div class="d-flex align-items-center">								<!--ud6-->
+										
+										<p class="mb-0 fs-5 dishp1" ><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 110</p>
+									</div>
+								</div>
+								<div class="quantity py-2">					<!--ud7-->
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">					<!--ud8-->
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Veg Pulao',110,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv ">
+								<img src="images/vegBiryani.jpg" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1">Veg Biryani</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;"onclick="addish1(this,'Veg Biryani',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/jeeraRice.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1">Jeera Rice</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 70</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Jeera Rice',70,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/dalKhichdi.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 bg-white rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1">Dal Khichdi</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 90</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Dal Khichdi',90,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div><!--vegrows-->
+
+				<div class="row g-4 nonvegrowmain">
+					<div class="text-center mt-5 mb-0">
+						<h5 class=" fw-bold" style="color: #001d3d;"> Non-Veg</h5> 
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/chiBiryani.jpg"  class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1 ">Chicken Biryani</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Chicken Biryani',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/butterChi.jpg" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1">Butter Chicken </h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Butter Chicken',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/greenChicken.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1">Green Chicken</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Green Chicken',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/chitikka.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 bg-white rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 nonvdish1 vsdish1">Chicken Tikka Masala</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5  nonvdishp1 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 120</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Chicken Tikka Masala',120,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+					
+				</div><!--nonvegrows-->
+			</div>
+
+			<!----- dessert--- -->
+
+			<div class=" p-3  tabopen " id="dessert" style="display: none;" >
+				<div class="row g-4 dessertrow">
+					<div class="text-center mt-5 mb-0" >
+						<h5 class=" fw-bold" style="color: #001d3d;">Dessert</h5> 
+
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-3">		<!--ud1-->
+						<div class="items1 rounded shadow bg-white" id="">		<!--ud2-->
+							<div class="imgdiv">									<!--ud3-->
+								<img src="images/vanilaIce.jpg"  class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2  rounded-bottom">						<!--ud4-->
+								<div class="d-flex justify-content-between  align-items-center py-2">	<!--ud5-->
+									<h4 class="mb-0 vsdish1" >Vanila Ice Cream</h4>
+									<div class="d-flex align-items-center">								<!--ud6-->
+										
+										<p class="mb-0 fs-5 dishp1" ><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 90</p>
+									</div>
+								</div>
+								<div class="quantity py-2">					<!--ud7-->
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">					<!--ud8-->
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Vanila Ice Cream',90,1)" >Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv ">
+								<img src="images/mangoice.jpg" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1">Mango Ice Cream</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 90</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;"onclick="addish1(this,'Mango Ice Cream',90,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/tiramisu.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1">Tiramisu</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 90</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Tiramisu',90,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="items1 rounded shadow bg-white">
+							<div class="imgdiv">
+								<img src="images/caramal.jpg" width="100%" class="rounded-top mainimg" alt="Image not avaliable">	
+							</div>
+							<div class="p-2 bg-white rounded-bottom">
+								<div class="d-flex justify-content-between  align-items-center py-2">
+									<h4 class="mb-0 vsdish1">Caramal Custard</h4>
+									<div class="d-flex align-items-center">
+										<p class="mb-0 fs-5 dishp1"><span class="fs-6"> <i class="fa fa-inr" aria-hidden="true"></i></span> 90</p>
+									</div>
+								</div>
+								<div class="quantity py-2">
+									<label>Qty-</label>
+									<input type="number" name="" value="1" class="qtinp" onchange="qty()">
+								</div>
+								<div class="text-center">
+									<button class="btn btn-sm  rounded dishbtn" style="background-color: #001d3d; color: white;" onclick="addish1(this,'Caramal Custard',90,1)">Add</button>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div><!--dessertrow-->			
+			</div>
+		</div><!--menu-->
+	</div>
+
+
+	<!-- ---------/////////// ----------->
+	
+	<!----------- Your order Page ---------------->
+
+
+	<div class="yurmain  justify-content-center " style="display: none;">
+		<div >
+			<div class=" text-center mb-5">
+				<h2>Your Order</h2>
+			</div>
+
+			<div class="order " >
+
+				
+				<table>
+						<thead>
+							<th>Name</th>
+							<th>Qty</th>
+							<th>Price</th>
+							<th class="reclbtn cantxt">Cancel</th>
+
+						</thead>
+
+						<tbody id="tblitname">
+							
+						</tbody>
+
+						<thead>
+							<th >Total</th>
+							<th colspan="3"  id="thpric"></th>											
+
+						</thead>
+
+						
+				</table>
+				<div class="porderbtn mt-3" style="text-align: right;">
+					<a href="#"><button class="btn btn-sm rounded-pill btn-success shadow fs-6" onclick="pOrder()"> Place order</button></a>
+					<a href="#"><button class="btn btn-sm rounded-pill btn-danger shadow fs-6" id="canord" onclick="cOrder()"> Cancel order</button></a>
+
+
+				</div>
+				
+			</div>
+
+		</div>
+	</div><!--yurmain-->
+
+
+	<!-- ---------//////--Contact page ----///// ----------->
+
+	<div class="contactmain  justify-content-center " style="display: none;">
+		
+		<div class="container-fluid px-0">
+			<div class="Consection2">
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.2153347990525!2d72.84999691490344!3d19.229444887000046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0d42c95bdf9%3A0x5a3374a957943f4b!2sTryCatch%20Classes%20%7C%20Full%20Stack%20Web%20Development%20%7C%20Data%20Science%20Python%20%7C%20Software%20Testing%20%7C%20Android%20IOS%20Flutter!5e0!3m2!1sen!2sin!4v1674624828892!5m2!1sen!2sin" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						
+					
+			</div>
+		</div>
+			<div class="container ">
+				
+				<div class="row gy-5 p-5">
+		
+							<!-- //////---------left side--------\\\\\\\\ -->
+		
+					<div class="col-lg-8 ">
+						<form>
+							<div class="row gy-4">
+								<div class="col-md-6">
+									<input type="text" name="" class="form-control" placeholder="Name">
+									
+								</div>
+								<div class="col-md-6">
+									<input type="email" name="" class="form-control" placeholder="Email">
+								</div>
+		
+								<div class="col-lg-12">
+									<input type="text" name="" class="form-control" placeholder="Subject">
+								</div>
+		
+								<div class="col-lg-12">
+									<textarea name="" id="" class="form-control" placeholder="Message" rows="9"></textarea>
+									
+		
+								</div>
+		
+								<div class="col-lg-12">
+									
+									<input type="submit" value="SEND MESSAGE" class="btn">
+		
+								</div>		
+		
+							</div>
+		
+						</form>
+					</div>
+		
+		
+							<!-- //////---------right side--------\\\\\\\\ -->
+		
+					<div class="col-lg-4">
+		
+									<!-- //////------box 1-------\\\\\\\\ -->
+						<div class="addemapho border pt-4 ps-4 bg-white">
+							
+							<ul class="d-flex align-items-center ps-0">
+								<li class="me-4"> <i class="fa fa-home" aria-hidden="true"></i></li>
+		
+								<li>
+									<h5>ADDRESS:</h5>
+									<p>1234, Contrary To Popular Sed Ut Perspiciatis 	Unde 1234</p>
+								</li>
+							</ul>
+		
+						</div>
+		
+									<!-- //////------box 2-------\\\\\\\\ -->
+						<div class="addemapho border pt-4 ps-4 bg-white">
+							
+							<ul class="d-flex align-items-center ps-0">
+								<li class="me-4"> <i class="fa fa-envelope" aria-hidden="true"></i></li>
+								
+								<li>
+									<h5>EMAIL ADDRESS:</h5>
+									<p class="mb-0">Info@Yoursite.Com</p>
+									<p>Info@Yoursite.Com</p>
+								</li>
+							</ul>
+		
+						</div>
+		
+		
+									<!-- //////------box 3-------\\\\\\\\ -->
+						<div class="addemapho border pt-4 ps-4 bg-white">
+							
+							<ul class="d-flex align-items-center ps-0">
+								<li class="me-4"> <i class="fa fa-phone" aria-hidden="true"></i></li>
+
+		
+								<li>
+									<h5>PHONE NUMBER:</h5>
+									<p class="mb-0">+0123456789</p>
+									<p>+1234567890</p>
+								</li>
+							</ul>
+		
+						</div>
+		
+					</div>
+		
+				</div>		
+			</div>
+
+	</div>
+
+	<!-- ---------//////--Enter name & mob ----///// ----------->
+
+	<div class="enmobilemain  justify-content-center align-items-center" style="display: none;">
+		<div class="enmobile p-3 rounded">
+			<div>
+				<label>Name: </label>
+				<input type="text" name="" placeholder="Enter name" id="billinp1"><br><br>
+				<label>Mobile: </label>
+				<input type="number" name="" placeholder="Enter Mobile No." id="billinp2">
+			</div>
+
+			<div class="text-center pt-3">
+				<button class="btn btn-sm btn-success" onclick="disbill()">Ok</button>
+				
+			</div>
+
+		</div>	
+	</div>
+	
+	
+	<!----------- Bill Page ---------------->
+
+	<div class="billpagemain justify-content-center align-items-start" style="display: none;">
+
+		<div class="billmain shadow bg-white" >
+			<div class="border-bottom p-2 text-white text-center fst-italic" style="background-color:#3DAFC8;">
+					<h5 class="mb-0" style="font-size:30px;" id="hbillnm">Hotel</h5>
+			</div>
+			<div class="border-bottom border-dark  p-2">
+				
+				<div>
+					<p>Name :- <span id="uname">  </span> </p>
+					<p>Mob. :- <span id="umob">  </span> </p> 
+
+				</div>
+				<div class=" d-flex ">
+					<p class="me-3 mb-0">Date :- <span id="date1">  </span></p>
+					<p class="mb-0">Time :- <span id="time1"> </span></p>
+
+				</div>
+			</div>
+			
+			<div class="billpage p-3">
+			
+			</div>
+
+			<div class="border-top border-dark p-3 bg-success text-center">
+				<button class="btn btn-sm  fw-bold btn-warning shadow" id="paybtn" onclick="paybill()"> Pay Now </button>
+			</div>
+		</div>
+		
+		<div class="payoptmain rounded bg-white" style="display:none">
+			
+			<div class="payopt">
+				<div class="bg-warning p-2 rounded-top">
+					<h5 class="mb-0">Payment Methods</h5>
+				</div>
+			</div>
+			<div>
+				<div class="p-2 border-bottom" style="background-color:#F6F8F8">
+					<p class="mb-0">Choose a payment method</p>
+				</div>
+				
+				<div class="pt-4">
+					<ul class="ps-0">
+						<li onclick="pament('upi')">UPI</li>
+						<li onclick="pament('card')">Credit/debit</li>
+						<li onclick="pament('cash')">Cash</li>
+					</ul>
+					
+				</div>
+			</div>
+
+		</div>
+
+		<div class="upipym rounded bg-white	" id="upi" style="display:none">				<!--G-pay-->
+			<div class="text-end pe-2">
+				<img src="images/cancel.png" height="20px" width="20px" onclick="clspayment('upi') " style="cursor: pointer;"> 
+			</div>
+			<div class="p-2">
+				<img src="images/upilogo.png" >
+			</div>
+			<div class="text-center">
+				<p class="mb-1">ab000gef@xyz</p>
+			</div>
+			<div class="text-center">
+
+				<img src="images/Qcode.png" height="200">
+
+				<p class="fw-bold" id="gpayhtname">Hotel</p>
+
+				<p>Scan and Pay with any BHIM UPI app</p>
+			</div>
+			<div class="border-top p-2 d-flex justify-content-around">
+				<div>
+					<img src="images/gpay_logo.jpg" style="height: 20px; width:20px">
+					<p style="font-size:10px">G-pay</p>
+				</div>
+				<div>
+					<img src="images/paytm_logo.png" style="height: 20px; width:20px">
+					<p style="font-size:10px">Paytm</p>
+				</div>
+				<div>
+					<img src="images/phonepe-logo-icon.png" style="height: 20px; width:20px">
+					<p style="font-size:10px">G-pay</p>
+				</div>
+
+			</div>								
+		</div>
+
+		<div class="cardmain rounded bg-white" id="card" style="display:none; width: 20%; ">		<!--Card payment-->
+			<div class="text-end pe-2 pt-2 bg-light">
+				<img src="images/cancel.png" height="20px" width="20px" onclick="clspayment('card')"style="cursor: pointer;" >
+			</div>
+			<div class=" text-center rounded bg-light p-3 pt-0" style="margin-top: -15px;">
+				<p class="mb-1 fs-5">Payment Details</p>
+				<img src="images/mstcard_logo.png"style="height: 40px; width:50px">
+				<img src="images/visa_logo.png"style="height: 40px; width:50px">
+
+			</div>
+			<div class="crddetl p-3">
+				<label class="mb-1">Card Number</label><br>
+				<input type="text" name="" placeholder="1234 5678 9012 3456" class="mb-2"><br>
+
+				<label class="mb-1">Name on card </label><br>
+				<input type="text" name="" placeholder="Ex. 'Digital menucard' by sanit" class="mb-2"><br>
+
+				<div class="expsety d-flex justify-content-between">
+					<div>
+						<label class="mb-1">Expiry date</label>
+						<input type="number" name="" placeholder="01 / 23" class="mb-2">
+					</div>
+					
+					<div  class="text-end">
+						<label class="mb-1">Security code</label>
+						<input type="password" name="" placeholder=". . . ">
+					</div>
+					
+				</div>
+				
+				<div class="mt-3">
+					<button class="btn btn-sm btn-primary" style="width:100%">Pay</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="cardmain rounded bg-white" id="cash" style="display:none; width: 20%;">			<!--Cash payment-->
+			<div class="text-end pe-2">
+				<img src="images/cancel.png" height="20px" width="20px" onclick="clspayment('cash')" style="cursor: pointer;">
+			</div>
+			<div class="text-center p-2">
+				<h4>Please wait...</h4>
+			</div>
+		</div>
+		
+	</div><!--billpage-->
+
+</div><!--section_1-->
+
+
+
+
+<!-- ---------/////////// ----------->
+	
+	<!----------- Admin Page ---------------->
+
+<div class="adminPage pb-4" style="display: none;">
+	<div class="ps-2 border">
+		<h2>Change hotel Name</h2>
+		<input type="text" name="hotelname" placeholder="Enter hotel name" id="inp1">
+		<button class="btn btn-sm btn-success rounded" onclick="htname()">Add</button>
+
+	</div>	
+
+	<div class="my-3">
+		<div>
+			<h2>Change Menu</h2>
+			
+		</div>
+
+		<!-- Starter -->
+		<div class="ps-2 text-center ">
+
+			<h3>Starter</h3>
+
+
+			<!-- <h6>veg</h6> -->
+
+			<div class=" chngmenu d-flex" >
+				
+				<div >
+
+					<div class="vegmenu">
+						<div class="text-center">
+							<h4>Veg</h4>
+						</div>
+						<input type="file" name="Choose img1" placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="French Fries">
+						<input type="number" name="" placeholder="Price..."class="vpinp1" value="60" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+						
+
+						<input type="file" name="Choose img2"  placeholder="" class="newimg"value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Veg Crispy">
+						<input type="number" name="" placeholder="Price..."class="vpinp1"  value="120" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+
+
+						<input type="file" name="Choose img3"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Veg Manchurian">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+
+						
+						<input type="file" name="Choose img4"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Paneer Chilli">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+					</div>
+					<div class="my-3">
+						<input type="file" name="Choose img5"  placeholder="" class="" value="">
+						<input type="text" name="" placeholder="Enter..."  id="">
+		  				<input type="number" name="" placeholder="Price..." id="" value="">
+	 
+						<button class="btn btn-sm btn-success rounded" onclick="additem1('additem_vegs',this)">Add</button>	
+					</div>
+
+				</div>
+
+				<div>
+					
+					<div class="non-vegmenu">
+						<div class="text-center">
+							<h4>Non-veg</h4>
+							
+						</div>
+
+						<input type="file" name="Choose img6"  placeholder="" class="newimg" value=" ">	
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Chicken Lollipop">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120" >
+
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+
+						<input type="file" name="Choose img7"  placeholder="" class="newimg" value=" ">	
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Chicken Crispy">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120">
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+
+						<input type="file" name="Choose img8"  placeholder="" class="newimg" value=" ">	
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Chicken Manchurian">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120">
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+
+						<input type="file" name="Choose img9"  placeholder="" id="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Chicken Chilli">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120">
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+					</div>
+					<div class="my-3">
+						<input type="file" name="Choose img10"  placeholder="" class="" value=" ">
+						<input type="text" name="" placeholder="Enter..." >
+		  				<input type="number" name="" placeholder="Price..."  value="">
+	 
+						<button class="btn btn-sm btn-success rounded" onclick="additem1('additem_non-veg',this)">Add</button>	
+					</div>
+
+				</div>
+
+			</div><!--chngmenu-->
+
+		</div>
+
+		<!-- Main -->
+		<div class="ps-2 text-center">
+
+			<h3>Main</h3>
+
+
+			<!-- <h6>veg</h6> -->
+
+			<div class=" chngmenu d-flex" >
+				
+				<div >
+
+					<div class="vegmenu_main">
+						<div class="text-center">
+							<h4>Veg</h4>
+						</div>
+						<input type="file" name="Choose img11"  placeholder=""  class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Veg Pulao">
+						<input type="number" name="" placeholder="Price..."class="vpinp1" value="110" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+						
+
+						<input type="file" name="Choose img12"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Veg Biryani">
+						<input type="number" name="" placeholder="Price..."class="vpinp1"  value="120" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+
+
+						<input type="file" name="Choose img13"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Jeera Rice">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="70" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+
+						
+						<input type="file" name="Choose img14"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Dal Khichdi">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="90" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+					</div>
+					<div class="my-3">
+						<input type="file" name="Choose img15"  placeholder="" class=""  value="">
+						<input type="text" name="" placeholder="Enter..."  id="adninp1">
+		  				<input type="number" name="" placeholder="Price..." id="adpinp1" value="">
+	 
+						<button class="btn btn-sm btn-success rounded" onclick="additem1('additem_vegmain',this)">Add</button>	
+					</div>
+
+				</div>
+
+				<div>
+					
+					<div class="non-vegmenu_main">
+						<div class="text-center">
+							<h4>Non-veg</h4>
+							
+						</div>
+
+						<input type="file" name="Choose img16"  placeholder="" class="newimg" value=" " >	
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Chicken Biryani">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120" >
+
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+
+						<input type="file" name="Choose img17"  placeholder="" class="newimg" value=" ">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Butter Chicken">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120">
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+
+						<input type="file" name="Choose img18"  placeholder="" class="newimg" value=" ">
+							<input type="text" name="" placeholder="Enter..." class="vninp1" value="Green Chicken">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120">
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+
+						<input type="file" name="Choose img19"  placeholder="" class="newimg" value=" ">
+							<input type="text" name="" placeholder="Enter..." class="vninp1" value="Chicken Tikka Masala">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="120">
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+					</div>
+					<div class="my-3">
+						<input type="file" name="Choose img20"  placeholder="" class="" value="">
+						<input type="text" name="" placeholder="Enter..." id="adninp2">
+		  				<input type="number" name="" placeholder="Price..." id="adpinp2" value="">
+	 
+						<button class="btn btn-sm btn-success rounded" onclick="additem1('additem_non-vegmain',this)">Add</button>	
+					</div>
+
+				</div>
+
+			</div><!--chngmenu-->
+		
+
+		</div><!-- Main -->
+
+
+		<!-- Dessert -->
+		<div class="ps-2 text-center">
+
+			<h3>Dessert</h3>
+
+
+			<!-- <h6>veg</h6> -->
+
+			<div class=" chngmenu d-flex" >
+				
+				<div >
+
+					<div class="dessert_main">
+						<div class="text-center">
+							<!-- <h4>Dessert</h4> -->
+						</div>
+						<input type="file" name="Choose img21"  placeholder="" class="newimg" value=" " >
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Vanila Ice Cream">
+						<input type="number" name="" placeholder="Price..."class="vpinp1" value="90" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+						
+
+						<input type="file" name="Choose img22"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Mango  Ice Cream">
+						<input type="number" name="" placeholder="Price..."class="vpinp1"  value="90" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button><br>
+
+
+						<input type="file" name="Choose img23"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Tiramisu">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="90" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+
+						
+						<input type="file" name="Choose img24"  placeholder="" class="newimg" value="">
+						<input type="text" name="" placeholder="Enter..." class="vninp1" value="Caramal Custard">
+						<input type="number" name="" placeholder="Price..." class="vpinp1" value="90" >
+
+						<button class="btn btn-sm btn-success" onclick="admenu()">Add</button> <br>
+					</div>
+					<div class="my-3">
+						<input type="file" name="Choose img25"  placeholder="" class=""  value="">
+						<input type="text" name="" placeholder="Enter..."  id="adninp1">
+		  				<input type="number" name="" placeholder="Price..." id="adpinp1" value="">
+	 
+						<button class="btn btn-sm btn-success rounded" onclick="additem1('additem_dessert',this)">Add</button>	
+					</div>
+
+				</div>
+
+			</div><!--chngmenu-->
+		
+
+		</div><!-- Dessert -->
+
+		<!-- settings -->
+
+		<div class="border-top border-5 py-4 " style="padding-left: 10%;">
+			<button class="btn btn-sm btn-danger" onclick="opchngpss()">Change password</button>
+			
+			<div class="chngpass p-3 slide-bottom shadow " style="display: none;">
+			
+				<div class="text-center p-2 pt-0" style="margin-top:-10px">
+					<img src="images/profile (1).png" height="35px" width="35px">
+					<p>Change login details</p>
+				</div>
+		        <label>User Id: </label><br>
+		        <input type="text" name="" id="chnginp1" class="" value="admin"><br><br>
+
+		        <label>Password:</label><br>
+		        <input type="password" name="" id="chnginp2" class="" value="admin">
+
+		        <div class="text-end mt-5">
+		            <button class="btn btn-sm btn-outline-primary"  onclick="chngpass()">Ok</button>
+
+		            <button class="btn btn-sm btn-outline-primary"  >cancle</button>
+		        </div>
+    		</div>
+
+		</div><!-- settings -->
+
+	</div>
+</div>
+
+
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="menucard.js"></script>
+
+</body>
+</html>
